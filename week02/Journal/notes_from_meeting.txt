@@ -1,0 +1,35 @@
+class Journal: stores  a list of journal entries
+adding an entry
+displaying all entries
+save to file 
+load file
+
+class Entry: Represents a single journal entry.
+
+class PromptGenerator: Supplies random prompts whenever needed.
+
+Journal{
+    AddEntry(newEntry : Entry) : void
+    DisplayAll() : void
+    SaveToFile(file : string)
+    LoadFromFile(file : string)
+
+    var
+    _entries : List<Entry>
+}
+
+Entry{
+    Display() : void
+
+    var
+    _date : string
+    _promptText : string
+    _entryText : string
+}
+
+PromptGenerator{
+    GetRandomPrompt() : string
+
+    var
+    _prompts : List<string>
+}
